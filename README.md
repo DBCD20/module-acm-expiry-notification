@@ -3,6 +3,8 @@
 ## Overview
 This project provides a notification system for expiring AWS Certificate Manager (ACM) certificates. It is crucial for maintaining the security and reliability of web applications and services that rely on TLS/SSL certificates.
 
+> ⚠️ Note: This system is not yet fully tested, but it may still provide valuable guidance or serve as a starting point for implementing your own ACM expiry alerting solution.
+
 ## ⚠️ Why ACM Expiry Notifications Matter
 TLS/SSL certificates are essential for:
 
@@ -22,3 +24,13 @@ While ACM supports automatic renewal for some certificates (like those in use by
 * Certificates may fail to renew due to DNS issues or validation problems
 * Human oversight is often needed to confirm successful renewal
 * Notification gives you time to investigate and fix issues before service is impacted
+
+## 🛠️ Setup
+```
+module "acm_expiry_notification {
+    source             = "git::https://github.com/DBCD20/module-acm-expiry-notification.git"
+    notification_email = myemail@gmail.com
+}
+```
+
+## Not yet fully tested
