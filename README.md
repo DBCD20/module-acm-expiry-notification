@@ -26,11 +26,14 @@ While ACM supports automatic renewal for some certificates (like those in use by
 * Notification gives you time to investigate and fix issues before service is impacted
 
 ## 🛠️ Setup
-```
+```main.tf
+
+## Add the following code to your tf file
 module "acm_expiry_notification {
     source             = "git::https://github.com/DBCD20/module-acm-expiry-notification.git"
     notification_email = myemail@gmail.com
 }
 ```
 
-## Not yet fully tested
+## 🚧 Status
+This project is a work in progress. Although not fully tested, it may still offer useful ideas or a framework for building your own solution.
